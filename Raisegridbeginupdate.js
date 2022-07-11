@@ -68,6 +68,7 @@ var RaiseGridBeginUpdate = function RaiseGridBeginUpdate(tempAdaptableOptions) {
            item.maxWidth = 250;
            item.tooltipField = item.field;
            item.minWidth = 30;
+           editable = true;
        }
        catch(e)
        {
@@ -118,7 +119,7 @@ var RaiseGridBeginUpdate = function RaiseGridBeginUpdate(tempAdaptableOptions) {
                 {
                     MessageType: 'Success',
                     Scope: {
-                        ColumnIds: ['User Remarks', 'Group Name', 'Break Status','User Name','Status','Attachment'],
+                        ColumnIds: ["is_historical","break_type", 'Break Status','User Name','Status','Attachment'],
                     },
                     Rule: {
                         Predicate: {
