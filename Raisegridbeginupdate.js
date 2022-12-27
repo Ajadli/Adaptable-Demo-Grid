@@ -7,11 +7,11 @@ var RaiseGridBeginUpdate = function RaiseGridBeginUpdate(tempAdaptableOptions) {
 
     tempAdaptableOptions.searchOptions["filterResultsAfterQuickSearch"] = true;
 
-    tempAdaptableOptions['filterOptions'] = {
-        defaultNumericColumnFilter: 'Values',
-        defaultDateColumnFilter: 'Values',
-        defaultStringColumnFilter: 'Values'
-    };
+    // tempAdaptableOptions['filterOptions'] = {
+    //     defaultNumericColumnFilter: 'Values',
+    //     defaultDateColumnFilter: 'Values',
+    //     defaultStringColumnFilter: 'Values'
+    // };
 // if (ViewSettingColumnInfo != null && ViewSettingColumnInfo != undefined) {
 //         tempAdaptableOptions.predefinedConfig.Layout.Layouts[0].Columns = ViewSettingColumnInfo;
 //     }
@@ -59,7 +59,7 @@ var RaiseGridBeginUpdate = function RaiseGridBeginUpdate(tempAdaptableOptions) {
         
     // }
 
-
+    tempAdaptableOptions.predefinedConfig.Layout.Layouts[0].Columns = ["is_historical"]
     tempAdaptableOptions.gridOptions.enableBrowserTooltips = true;
 
     tempAdaptableOptions.gridOptions.columnDefs.forEach(item => {
