@@ -205,6 +205,26 @@ var AdaptiveGridRaiseGridRender = function (event, gridID) {
             $(".rad-preview-gridparent").height($(".rad-preview-gridparent").outerHeight() + 71)
         }
     });
+	
+	$("#adaptableSummary1").bind("click").click(function () {
+        if (GetSelectedGridId() !== undefined) {
+            try {
+                adaptablegridbundle.getAdaptableApi(GetSelectedGridId()).filterApi.clearColumnFilters();
+                adaptablegridbundle.getAdaptableApi(GetSelectedGridId()).adaptable.api.gridApi.setRowGroupColumns([]);
+
+                try {
+                    adaptablegridbundle.getAdaptableApi(GetSelectedGridId()).gridApi.deselectAll();
+                }
+                catch (ex) {
+
+                }
+            }
+            catch (ex) {
+
+            }
+        }
+    });
+	
     if(batched==false){
         RenderDataForPendingAssets();
     }
