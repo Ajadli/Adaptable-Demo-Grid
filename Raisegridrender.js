@@ -208,28 +208,7 @@ var AdaptiveGridRaiseGridRender = function (event, gridID) {
     if(batched==false){
         RenderDataForPendingAssets();
     }
-	
-	function clearallfilters {
-        if (GetSelectedGridId() !== undefined) {
-
-            try {
-                BMSingleScreen.prototype.ApplyRightBorderToRows = null;
-                adaptablegridbundle.getAdaptableApi(GetSelectedGridId()).filterApi.clearColumnFilters();
-                adaptablegridbundle.getAdaptableApi(GetSelectedGridId()).adaptable.api.gridApi.setRowGroupColumns([]);
-
-                try {
-                    adaptablegridbundle.getAdaptableApi(GetSelectedGridId()).gridApi.deselectAll();
-                }
-                catch (ex) {
-
-                }
-            }
-            catch (ex) {
-
-            }
-        }
-	}
-    
+	   
     
 }
 
