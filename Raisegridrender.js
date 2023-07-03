@@ -209,7 +209,7 @@ var AdaptiveGridRaiseGridRender = function (event, gridID) {
         RenderDataForPendingAssets();
     }
 	
-	$("#clearallfilters").bind("click").click(function () {
+	function clearallfilters {
         if (GetSelectedGridId() !== undefined) {
 
             try {
@@ -228,7 +228,7 @@ var AdaptiveGridRaiseGridRender = function (event, gridID) {
 
             }
         }
-    });
+	}
     
     
 }
