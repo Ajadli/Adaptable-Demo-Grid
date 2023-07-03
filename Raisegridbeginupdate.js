@@ -141,6 +141,7 @@ var RaiseGridBeginUpdate = function RaiseGridBeginUpdate(tempAdaptableOptions) {
     }
 
     tempAdaptableOptions.predefinedConfig.Alert = Flashing;
+	tempAdaptableOptions.filterOptions.autoApplyFilter = false;
 
 
     tempAdaptableOptions.menuOptions.contextMenuOrder = [];
